@@ -1,0 +1,17 @@
+#banner {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.gameWon {
+  background-color: green;
+  color: white;
+  padding: 20px;
+}
+.gameLost {
+  background-color: red;
+  color: white;
+  padding: 20px;
+}
