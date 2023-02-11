@@ -6,6 +6,7 @@ import InputBox from '../InputBox';
 import GuessGrid from '../GuessGrid/GuessGrid';
 import ResultBanner from '../ResultBanner';
 import { checkGuess } from '../../game-helpers';
+import { NUM_OF_GUESSES_ALLOWED } from '../../constants';
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
@@ -32,7 +33,7 @@ function Game() {
       setGameOverMessage(
         `<b>Congratulations!</b> Got it in <b>${guesses.length} guesses.</b>`
       );
-    } else if (guesses.length >= 5) {
+    } else if (guesses.length >= NUM_OF_GUESSES_ALLOWED-1) {
       setGameOver(true);
       setGameWon(false);
       setGameOverMessage(`Sorry, the correct answer is <b>${answer}</b>`);
