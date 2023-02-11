@@ -31,7 +31,7 @@ function Game() {
       setGameOver(true);
       setGameWon(true);
       setGameOverMessage(
-        `<b>Congratulations!</b> Got it in <b>${guesses.length} guesses.</b>`
+        `<b>Congratulations!</b> Got it in <b>${guesses.length+1} guesses.</b>`
       );
     } else if (guesses.length >= NUM_OF_GUESSES_ALLOWED-1) {
       setGameOver(true);
